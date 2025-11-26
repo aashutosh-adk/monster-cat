@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  /* DARK OVERLAY to match Monstercat style */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6)
+    );
+    pointer-events: none;
+  }
+}
+
+/* CONTENT AREA */
+.hero-content {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 1300px;
+  text-align: left;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* TITLE TEXT AREA (if used later) */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+
+  button {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+
+  .primary {
+    background: #8a6cff;
+    color: white;
+    border: none;
+
+    &:hover {
+      background: #a58bff;
+      transform: translateY(-2px);
+    }
+  }
+
+  .secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* LEFT + RIGHT CAROUSEL ARROWS */
+.hero-arrow-left,
+.hero-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 8;
+  transition: 0.25s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.hero-arrow-left {
+  left: 30px;
+}
+.hero-arrow-right {
+  right: 30px;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 900px) {
+  .hero-content {
+    bottom: 40px;
+    width: 90%;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-buttons button {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+}

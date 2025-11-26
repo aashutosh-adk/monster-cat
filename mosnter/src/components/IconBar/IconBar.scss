@@ -1,0 +1,30 @@
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+
+  .icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: 0.3s;
+
+    img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+}

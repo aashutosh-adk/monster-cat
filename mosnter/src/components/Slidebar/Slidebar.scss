@@ -1,0 +1,22 @@
+  .sidebar {
+  position: fixed;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  top: 0;
+  background: #0d0d0f;
+  color: white;
+  padding: 40px;
+  transition: 0.4s ease;
+  z-index: 999;
+
+  &.open {
+    right: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

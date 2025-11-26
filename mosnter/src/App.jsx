@@ -1,0 +1,36 @@
+import React, { useState } from "react";
+import Hero from "./components/Hero/Hero";
+import Slidebar from "./components/Slidebar/Slidebar";
+import "./App.scss";
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="App">
+      {/* Sidebar */}
+      <Slidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+
+      {/* Top Navigation also known or called  as  Burger Icon */}
+      <header className="top-nav">
+        <div className="logo">
+         <img src="../assests/Images/monster-cat.png" alt="Logo" />
+        </div>
+
+        <button
+          className="burger"
+          onClick={() => setSidebarOpen(true)}
+        >
+          <div />
+          <div />
+          <div />
+        </button>
+      </header>
+
+      {/* HERO SECTION */}
+      <Hero />
+    </div>
+  );
+}
+
+export default App;
