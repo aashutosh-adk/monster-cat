@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "framer-motion": "^12.23.24",
+    "sass": "^1.94.2",
+    "swiper": "^12.0.3"
+  }
+}
