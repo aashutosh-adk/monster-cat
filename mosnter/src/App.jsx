@@ -16,6 +16,7 @@ function App() {
       <header className="top-nav">
         <div className="logo">
          <img src={monsterCatLogo} alt="Logo" />
+         <span className="logo-text">Monster Cat</span>
         </div>
 
         <button

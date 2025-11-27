@@ -14,11 +14,36 @@
 
   .logo {
     margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
     img {
       height: 50px;
       width: auto;
       display: block;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      transition: 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    &:hover .logo-text {
+      color: #ff6b35;
     }
   }
 
