@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Hero from "./components/Hero/Hero";
 import Slidebar from "./components/Slidebar/Slidebar";
+import monsterCatLogo from "./assests/Images/monster-cat.png";
 import "./App.scss";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       {/* Top Navigation also known or called  as  Burger Icon */}
       <header className="top-nav">
         <div className="logo">
-         <img src="../assests/Images/monster-cat.png" alt="Logo" />
+         <img src={monsterCatLogo} alt="Logo" />
         </div>
 
         <button
